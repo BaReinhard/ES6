@@ -1,6 +1,26 @@
 ## Reason for this Repo
 As more and more features are becoming available in ES6+ it appears that a solid foundation in ES6 and beyond is becoming more and more worthwhile. Given that most of these features fix some of the shortcomings of the previous standards and are a few of the reasons why some of the current libraries and frameworks were created. I feel that in the coming weeks/months/years that learning these new features will help to write more meaningful code with better practices in mind.
 
+## Getting Started Writing ES6
+
+* Install NodeJS
+* Create new projects directory
+* `npm init -y`
+* `npm install --save-dev babel-cli babel-preset-env`
+* Install jshint package for whatever editor you so choose
+* Create `app.js` file or whatever name you prefer
+* Create the first block of code :
+
+```
+(function(){
+'use strict';
+let name = "Your_name_here";
+let hello = `Hello World! -${name}`;
+console.log(hello);
+})();
+```
+### Start Writing More!
+
 ## What is being used for writing ES6 code
 * <b>ATOM</b> with `linter-jshint` to help show possible conflicts in the code.
 * <b>NodeJS</b> packages of babel e.g. `npm install --save-dev babel-cli babel-preset-env`
