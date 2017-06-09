@@ -1,4 +1,5 @@
-Repo made to help practice best practices and new features of ES6.
+## Reason for this Repo
+As more and more features are becoming available in ES6+ it appears that a solid foundation in ES6 and beyond is becoming more and more worthwhile. Given that most of these features fix some of the shortcomings of the previous standards and are a few of the reasons why some of the current libraries and frameworks were created. I feel that in the coming weeks/months/years that learning these new features will help to write more meaningful code with better practices in mind.
 
 ## What is being used for writing ES6 code
 * I am using ATOM with `linter-jshint` to help show possible conflicts in the code.
