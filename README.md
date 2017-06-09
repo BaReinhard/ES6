@@ -17,6 +17,7 @@ As more and more features are becoming available in ES6+ it appears that a solid
 let name = "Your_name_here";
 let hello = `Hello World! -${name}`;
 console.log(hello);
+// expect output : Hello World! -Your_name_here
 })();
 ```
 ### Start Writing More!
