@@ -7,8 +7,8 @@ Repo made to help practice best practices and new features of ES6.
 
 ## Some Sample Code
 
+### Read Only Variables and Block Level Scope
 ```
-// Read only variable
 (function(){
 	const MAX_SIZE = 10;
 
@@ -18,9 +18,11 @@ Repo made to help practice best practices and new features of ES6.
 	 console.log(i)
 	}
 })();
+```
 
-// Arrow Functions
+### Arrow Functions
 
+```
 let add = (x,y) => {
 		let temp = x+y;
 		return temp;
@@ -28,8 +30,11 @@ let add = (x,y) => {
 	let square = x => Math.pow(x,2);
 	let three = () => 3;
 
-// Classes
+```
 
+### Classes
+
+```
 	class Employee extends Person{
 			constructor(name,title){
 				super(name);
@@ -47,9 +52,11 @@ let add = (x,y) => {
 			}
 
 	}
-  
-// Template Literals
-// Great for making urls
+```
+
+### Template Literals, great for making urls
+
+```
 let upper = function(strings, ...values){
 		let result = "";
 		for(let i = 0;i<strings.length;i++){
