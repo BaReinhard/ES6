@@ -1,3 +1,4 @@
+
 (function () {
    'use strict';
    // this function is strict...
@@ -190,5 +191,52 @@ var doubled = numbers.map(n=>n*2);
 console.log(doubled);
 })();
 
+// Iterators + Generators
+(function(){
+	var iterator = {};
+	function ajax(name){
+
+
+		return new Promise((resolve, reject) => {setTimeout(resolve, 3000, name);});
+
+	};
+
+// Generator
+	iterator[Symbol.iterator] = function*(){
+		yield ajax("brett");
+		yield ajax('https://github.com/bareinhard');
+		yield ajax('brett');
+		yield ajax('brett');
+
+	};
+	for(var i of iterator){
+		console.log(i);
+	}
+var p = Promise.all(iterator);
+console.log(p);
+// p.then(function(data){
+// console.log("It did it");
+// 	console.log(data);
+// });
+
+})();
+// Just Generators
+(function(){
+	let start = 0, end = 30;
+let numbers = function*(start,end){
+	for(var i = start;i<end;i++){
+		yield i;
+	}
+};
+let sum = 0;
+
+let iterator = numbers(start,end);
+let next = iterator.next();
+while(!next.done){
+	sum+= next.value;
+	next = iterator.next();
+}
+console.log(sum);
+})();
 
 }());
