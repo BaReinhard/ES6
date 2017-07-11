@@ -32,9 +32,9 @@
 // Rest Params
 (function(){
 	console.log("Rest Params");
-	let doWork = function(name, ...numbers){
+	let doWork = (name, ...numbers)=>{
 		let result = 0;
-		numbers.forEach(function(n){
+		numbers.forEach((n)=>{
 			result +=n;
 		});
 		return result;
@@ -47,7 +47,7 @@
 (function(){
 	console.log("Spread Operator");
 	// Spread Operator
-	let spreadWork = function(x,y,z){
+	let spreadWork = (x,y,z)=>{
 		return x +y + z;
 	};
 
@@ -65,7 +65,7 @@
 
 // Template Literals
 (function(){
-	let tempLitWork = function(name){
+	let tempLitWork = (name)=>{
 		return `Hello, ${name}`;
 	};
 	let tempLitResult = tempLitWork("Brett");
@@ -78,7 +78,7 @@
 	console.log(url);
 
 	// Uses tags as well
-	let upper = function(strings, ...values){
+	let upper = (strings, ...values)=>{
 		let result = "";
 		for(let i = 0;i<strings.length;i++){
 			result += strings[i];
@@ -153,7 +153,7 @@
 	console.log(e1.toString());
 	console.log(p1.toString());
 
-	let makeEveryoneWork = function(...people){
+	let makeEveryoneWork = (...people)=>{
 		var results = [];
 		for (var i = 0; i<people.length;i++){
 			if(people[i] instanceof Person){
